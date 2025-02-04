@@ -10,4 +10,68 @@ body, html {
     background-image: url("./assets/images/Ionia_The_Placidium.webp");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lobby-header h1 {
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.direction-link {
+    margin: 30px;
+}
+
+.loader {
+    width: 75px;
+    height: 75px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    animation: pulse 1s linear infinite;
+    text-align: center;
+    align-content: center;
+    font-size: x-large;
+}
+.loader:after {
+    content: '';
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border: 5px solid #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1s linear infinite;
+}
+
+.arrow-down-animated {
+    color: lightgray;
+    font-weight: bolder;
+    animation: arrow-up-to-down 1s linear infinite;
+}
+
+@keyframes arrow-up-to-down {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(25%) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes scaleUp {
+    0% { transform: translate(-50%, -50%) scale(0) }
+    60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+}
+@keyframes pulse {
+    0% , 60% , 100%{ transform:  scale(1) }
+    80% { transform:  scale(1.2)}
 }

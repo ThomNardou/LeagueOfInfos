@@ -1,9 +1,11 @@
-import LobbyHeader from "../Components/Lobby/HeaderComponent.tsx";
+import LobbyHeader from "../Components/Lobby/LobbyHeader";
 
 const Lobby = () => {
     return (
         <>
             <LobbyHeader />
+
+
         </>
     )
 }

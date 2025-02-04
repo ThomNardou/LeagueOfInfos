@@ -4,8 +4,6 @@ const Lobby = () => {
     return (
         <>
             <LobbyHeader />
-
-
         </>
     )
 }

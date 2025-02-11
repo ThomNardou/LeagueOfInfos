@@ -1,88 +1,86 @@
+@font-face {
+    font-family: LeagueOfLegends-font;
+    src: url("./assets/fonts/League.otf");
+}
+
 body, html {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    background-color: #010A13;
 }
 
-.lobby-header {
-    width: 100%;
-    height: 100vh;
-    background-image: url("./assets/images/Ionia_The_Placidium.webp");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
-.lobby-header h1 {
-    color: white;
-    font-size: 5rem;
-    text-align: center;
-}
-
-.direction-link {
-    margin: 30px;
+.logo-s {
+    width: 100px;
     border-radius: 100%;
+    margin: 20px;
 }
 
-.direction-link:hover {
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: .10s;
+.links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    list-style: none;
+    padding: 0;
+    width: 60%;
 }
 
-.direction-link:not(:hover) {
-    background-color: rgba(255, 255, 255, 0);
-    transition: .10s;
-}
-
-.loader {
-    width: 85px;
-    height: 85px;
-    border: 5px solid #FFF;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
+.link {
+    color: white;
     position: relative;
-    animation: pulse 1s linear infinite;
-    text-align: center;
-    align-content: center;
-    font-size: xx-large;
+    text-decoration: none;
+    padding: 0 0 2px 0;
+    font-size: 20px;
 }
-.loader:after {
+
+.link:hover {
+    color: #F0E6D2;
+    cursor: pointer;
+}
+
+.link::before {
     content: '';
     position: absolute;
-    width: 85px;
-    height: 85px;
-    border: 5px solid #FFF;
-    border-radius: 50%;
-    display: inline-block;
-    box-sizing: border-box;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    animation: scaleUp 1s linear infinite;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #F0E6D2;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
 }
 
-.arrow-down-animated {
-    color: lightgray;
-    font-weight: bolder;
-    animation: arrow-up-to-down 1s linear infinite;
+.link:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
-@keyframes arrow-up-to-down {
-    0% { transform: translateY(0) }
-    50% { transform: translateY(25%) }
-    100% { transform: translateY(0) }
+
+.hamburger {
+    display: none;
 }
 
-@keyframes scaleUp {
-    0% { transform: translate(-50%, -50%) scale(0) }
-    60% , 100% { transform: translate(-50%, -50%)  scale(1)}
-}
-@keyframes pulse {
-    0% , 60% , 100%{ transform:  scale(1) }
-    80% { transform:  scale(1.2)}
+@media screen and (max-width: 768px) {
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+    }
 }

@@ -1,0 +1,166 @@
+.lobby-header {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/Ionia_The_Placidium.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 1px -140px 117px 78px rgba(1,10,19,1) inset;
+    -webkit-box-shadow: 1px -140px 117px 78px rgba(1,10,19,1) inset;
+    -moz-box-shadow: 1px -140px 117px 78px rgba(1,10,19,1) inset;
+}
+
+.lobby-header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lobby-header h1 {
+    color: #C89B3C;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: lighter;
+    font-family: LeagueOfLegends-font;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.lobby-header div img {
+    width: 40%;
+}
+
+.direction-link {
+    margin-bottom: 60px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.arrow-down-animated {
+    color: lightgray;
+    font-weight: bolder;
+    animation: arrow-up-to-down 1s linear infinite;
+    font-size: xxx-large;
+    transition: all 0.5s;
+}
+
+.lobby-body-search {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
+.search-container {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    align-items: center;
+}
+
+.search-container h1 {
+    color: #F0E6D2;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: lighter;
+    font-family: LeagueOfLegends-font;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+.lobby-body-search .search-image {
+    width: 30%;
+    margin: auto;
+    z-index: 5;
+}
+
+.decorator-hr {
+    margin: 30px 0;
+}
+
+.emblem {
+    width: 50%;
+    position: absolute;
+    margin: auto;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    opacity: 0.1;
+}
+
+.search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.search-bar input {
+    width: 40%;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+}
+
+.search-bar select {
+    background-color: #005A82;
+    color: #F0E6D2;
+    height: 50px;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 10%;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.search-bar button {
+    background-color: #005A82;
+    color: #F0E6D2;
+    height: 50px;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    width: 10%;
+    text-align: center;
+    align-content: center;
+    font-size: 1.5rem;
+}
+
+@keyframes arrow-up-to-down {
+    0% { transform: translateY(0) }
+    50% { transform: translateY(25%) }
+    100% { transform: translateY(0) }
+}
+
+@keyframes scaleUp {
+    0% { transform: translate(-50%, -50%) scale(0) }
+    60% , 100% { transform: translate(-50%, -50%)  scale(1)}
+}
+@keyframes pulse {
+    0% , 60% , 100%{ transform:  scale(1) }
+    80% { transform:  scale(1.2)}
+}
+
+@media screen and (max-width: 768px) {
+    .lobby-header div img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lobby-header h1 {
+        font-size: 3rem;
+    }
+
+}
